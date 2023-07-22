@@ -3,11 +3,14 @@
 #include <stdlib.h>
 
 //#define PART_1 
-/* A     B       C  [Opponent]
- * Rock  Paper   Scisors
- * X     Y       Z  [US]
- * +1   +2      +3
+
+/* A   	 B       C  [Opponent]
+ * Rock	 Paper   Scisors
+ * X   	 Y       Z  [US]
+ * +1  	+2      +3
+ * Loss	Draw    Win [Part 2]
  * 0 : lost, +3 : draw, +6 : Win
+ *
  */
 
 int calc_shape(int mov_self)
@@ -33,19 +36,19 @@ int outcome_shape(int mov_opp, int result_shape)
 {
     int mov_self;
 
-    if (result_shape == 'X') {
+    if (result_shape == 'X') {         // Loss
         if (mov_opp == 'B' || mov_opp == 'C')
-            mov_self = (mov_opp -1);
+            mov_self = (mov_opp -1);   
         else
             mov_self = (mov_opp + 2);
     }
-    else if (result_shape == 'Z'){
-        if (mov_opp == 'A' || mov_opp == 'B') // If needed to win
+    else if (result_shape == 'Z'){    // Win
+        if (mov_opp == 'A' || mov_opp == 'B') 
             mov_self = (mov_opp + 1);   // Add 1 if Rock or Paper
         else
             mov_self = (mov_opp - 2); // Remove 2 If Scissors
     }
-    else {
+    else {                           //Draw
         mov_self = mov_opp;
     }
     
