@@ -6,5 +6,5 @@ $ gcc -o <file> <file>.c -Wall -Wextra -std=99
 ```
 
 Some solutions may be slow/ineffecient. This is just the most easy
-[As in, easy on my brain]. Explainations are given in each folder, along
+_As in, easy on my brain_. Explanations are given in each folder, along
 with the data.txt file for the data of each puzzle.
