@@ -1,10 +1,4 @@
-# AOC 2022 in C
-Solutions to Advent of Code 2022 in C.
-Compile:
-``` sh
-$ gcc -o <file> <file>.c -Wall -Wextra -std=99
-```
-
-Some solutions may be slow/ineffecient. This is just the most easy
-_As in, easy on my brain_. Explanations are given in each folder, along
-with the data.txt file for the data of each puzzle.
+# Advent of Code
+My solutions for advent of Code over the years.  
+Each Year has a branch with each Day having its own folder, each having the
+puzzle input and a Makefile to compile.
